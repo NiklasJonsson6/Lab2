@@ -12,9 +12,7 @@ public class Rse
 
         for (int k= 1; k < m.length; k++)
         {
-            if (rowSum(m[0]) == rowSum(m[k]))
-                ;
-            else
+            if (rowSum(m[0]) != rowSum(m[k]))
                 return false;
         }
         return true;
