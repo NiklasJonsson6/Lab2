@@ -1,5 +1,7 @@
 /*
 Grupp 13
+Niklas Jonsson
+Simon Moos
  */
 public class Rse
 {
