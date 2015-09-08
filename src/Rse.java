@@ -15,7 +15,6 @@ public class Rse
             else
                 return false;
         }
-
         return true;
     }
 
