@@ -5,9 +5,18 @@ public class Rse
 {
     public static boolean allRowSumsEqual(int [][] m)
     {
-        /*
-        compare all row sums
-         */
+        if (m == null)
+            return true;
+
+        for (int k= 1; k < m.length; k++)
+        {
+            if (rowSum(m[0]) == rowSum(m[k]))
+                ;
+            else
+                return false;
+        }
+
+        return true;
     }
 
     public static int rowSum(int[] v)
