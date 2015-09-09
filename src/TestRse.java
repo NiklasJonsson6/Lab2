@@ -26,7 +26,7 @@ public class TestRse
             System.out.println("All sums are not equal!");
     }
 
-    static void print(int[][] m)    //för utskrift
+    static void print(int[][] m)    //Magnus metod för utskrift
     {
         if (m == null)
             System.out.print("[ null ]");
