@@ -7,7 +7,7 @@ public class Rse
 {
     public static boolean allRowSumsEqual(int [][] m) //returnerar true/false f�r om alla rader i matrisen har samma summa
     {
-        if (m == null)  //om matrisen �r null �r summorna lika
+        if (m == null || m.length == 0)  //om matrisen �r null �r summorna lika
             return true;
 
         int sum = rowSum(m[0]);
