@@ -5,14 +5,15 @@ Simon Moos
  */
 public class Rse
 {
-    public static boolean allRowSumsEqual(int [][] m) //returnerar true/false för om alla rader i matrisen har samma summa
+    public static boolean allRowSumsEqual(int [][] m) //returnerar true/false fï¿½r om alla rader i matrisen har samma summa
     {
-        if (m == null)  //om matrisen är null är summorna lika
+        if (m == null)  //om matrisen ï¿½r null ï¿½r summorna lika
             return true;
 
+        int sum = rowSum(m[0]);
         for (int k= 1; k < m.length; k++)
         {
-            if (rowSum(m[0]) != rowSum(m[k]))   //jämför samtliga rader med första raden
+            if (sum != rowSum(m[k]))   //jï¿½mfï¿½r samtliga rader med fï¿½rsta raden
                 return false;
         }
         return true;
@@ -21,7 +22,7 @@ public class Rse
     public static int rowSum(int[] v)   //summera rader
     {
         int sum = 0;
-        if (v == null)  //om raden är null är radens summa 0
+        if (v == null)  //om raden ï¿½r null ï¿½r radens summa 0
             return 0;
 
         for (int k = 0; k < v.length; k++)

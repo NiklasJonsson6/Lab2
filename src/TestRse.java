@@ -1,5 +1,7 @@
-/**
- * Created by Niklas on 2015-09-09.
+/*
+Grupp 13
+Niklas Jonsson
+Simon Moos
  */
 public class TestRse
 {
@@ -26,7 +28,7 @@ public class TestRse
             System.out.println("All sums are not equal!");
     }
 
-    static void print(int[][] m)    //Magnus metod för utskrift
+    static void print(int[][] m)    //Magnus metod fï¿½r utskrift
     {
         if (m == null)
             System.out.print("[ null ]");
