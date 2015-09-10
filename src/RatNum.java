@@ -5,6 +5,20 @@ Simon Moos
  */
 public class RatNum
 {
+    public RatNum()
+    {
+        int a = 0;
+        int b = 1;
+    }
+
+    public RatNum(int t)
+    {
+        int a = t;
+        int b = 1;
+    }
+
+
+
     public static int gcd(int m, int n)
     {
         if (m < 0)
