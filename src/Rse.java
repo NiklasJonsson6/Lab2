@@ -5,7 +5,7 @@ Simon Moos
  */
 public class Rse
 {
-    public static boolean allRowSumsEqual(int [][] m) //returnerar true/false f�r om alla rader i matrisen har samma summa
+    public static boolean allRowSumsEqual(int [][] m) //returnerar true/false om allrowsumsequal
     {
         if (m == null || m.length == 0)  //om matrisen �r null �r summorna lika
             return true;
