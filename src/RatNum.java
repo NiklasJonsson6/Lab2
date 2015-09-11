@@ -5,19 +5,43 @@ Simon Moos
  */
 public class RatNum
 {
+    private int t, n;
+
     public RatNum()
     {
-        int a = 0;
-        int b = 1;
+        t = 0;
+        n = 1;
     }
 
-    public RatNum(int t)
+    public RatNum(int a)
     {
-        int a = t;
-        int b = 1;
+        t = a;
+        n = 1;
     }
 
+    public RatNum(RatNum r)
+    {
+        t = r.t;
+        n = r.n;
+    }
 
+    public RatNum(int a, int b)
+    {
+        if (b == 0)
+            throw new NumberFormatException("Denominator = 0");
+        if (a < 0 && b < 0)
+            {
+                a /= -1;
+                b /= -1;
+            }
+        if (b < 0)
+            b /= -1;
+
+        a /= gcd(a, b);
+        b /= gcd(a, b);
+        t = a;
+        n = b;
+    }
 
     public static int gcd(int m, int n)
     {
