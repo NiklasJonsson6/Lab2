@@ -48,6 +48,11 @@ public class RatNum
         n = r.n;
     }
 
+    public RatNum(String s)
+    {
+        this(parse(s));
+    }   //value from string
+
     public int getNumerator()
     {
         return t;
@@ -56,6 +61,53 @@ public class RatNum
     public int getDenominator()
     {
         return n;
+    }
+
+    public String toString()
+    {
+        return t + "/" + n;
+    }
+
+    public double toDouble()
+    {
+        return t/n;
+    }
+
+    public boolean equals(RatNum r)
+    {
+        return t == r.t && n == r.n;
+    }
+
+    public boolean lessThan(RatNum r)
+    {
+        double ta = t, tb = r.t, na = n, nb = r.n;
+        return ta / na < tb / nb;
+    }
+
+
+
+    public static RatNum parse(String s)
+    {
+        if (s == null)
+            throw new NumberFormatException("null");
+
+        int d = s.length(); //will later hold '/'-s place in the string s
+
+        if (s.charAt(0) == '/') //if '/' is the first char in s
+            throw new NumberFormatException();
+
+        for (int k = 0; k < s.length(); k++) //create integers t, n
+        {
+            if (s.charAt(k) == '/')
+                d = k;
+        }
+        if (d == s.length())    //if no '/' was found
+            s += "/1";
+
+        int t = Integer.parseInt(s.substring(0, d));
+        int n = Integer.parseInt(s.substring(d+1, s.length()));
+
+        return new RatNum(t, n);
     }
 
     public static int gcd(int m, int n) //return greatest common divisor
