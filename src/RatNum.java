@@ -19,12 +19,6 @@ public class RatNum
         n = 1;
     }
 
-    public RatNum(RatNum r)
-    {
-        t = r.t;
-        n = r.n;
-    }
-
     public RatNum(int a, int b)
     {
         if (b == 0)
@@ -42,6 +36,23 @@ public class RatNum
         t = a;
         n = b;
     }
+
+    public RatNum(RatNum r)
+    {
+        t = r.t;
+        n = r.n;
+    }
+
+    public int getNumerator(RatNum r)
+    {
+        return r.t;
+    }
+
+    public int getDenominator(RatNum r)
+    {
+        return r.n;
+    }
+
 
     public static int gcd(int m, int n)
     {
