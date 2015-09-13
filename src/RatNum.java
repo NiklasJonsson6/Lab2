@@ -43,14 +43,14 @@ public class RatNum
         n = r.n;
     }
 
-    public int getNumerator(RatNum r)
+    public int getNumerator()
     {
-        return r.t;
+        return t;
     }
 
-    public int getDenominator(RatNum r)
+    public int getDenominator()
     {
-        return r.n;
+        return n;
     }
 
 
