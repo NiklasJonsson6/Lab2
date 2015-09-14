@@ -74,12 +74,18 @@ public class RatNum
 
     public double toDouble()
     {
-        return t/n;
+        return (double)t/n;
     }
 
-    public boolean equals(RatNum r)
+    public boolean equals(Object r)
     {
-        return t == r.t && n == r.n;
+        if (r == null)
+            return false;
+        if (!(r instanceof RatNum))
+            return false;
+
+        RatNum r2 = (RatNum)r;
+        return t == r2.t && n == r2.n;
     }
 
     public boolean lessThan(RatNum r)
