@@ -13,7 +13,7 @@ public class Rse
         int sum = rowSum(m[0]);
         for (int k= 1; k < m.length; k++)
         {
-            if (sum != rowSum(m[k]))   //j�mf�r samtliga rader med f�rsta raden
+            if (sum != rowSum(m[k]))
                 return false;
         }
         return true;

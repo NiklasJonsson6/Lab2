@@ -74,7 +74,7 @@ public class RatNum
 
     public double toDouble()
     {
-        return (double)t/n;
+        return t/n;
     }
 
     public boolean equals(RatNum r)
