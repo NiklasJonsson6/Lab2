@@ -126,7 +126,7 @@ public class RatNum
         if (s.charAt(0) == '/') //if '/' is the first char in s
             throw new NumberFormatException();
 
-        for (int k = 0; k < s.length(); k++) //create integers t, n
+        for (int k = 0; k < s.length(); k++)
         {
             if (s.charAt(k) == '/')
                 d = k;
