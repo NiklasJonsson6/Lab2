@@ -7,6 +7,8 @@ public class RatNum
 {
     private int t, n;
 
+    //constructors:
+
     public RatNum() //t = 0, n = 1, default values
     {
         t = 0;
@@ -53,6 +55,8 @@ public class RatNum
         this(parse(s));
     }   //value from string
 
+    //instance methods:
+
     public int getNumerator()
     {
         return t;
@@ -84,7 +88,12 @@ public class RatNum
         return ta / na < tb / nb;
     }
 
+    public RatNum add(RatNum r)
+    {
+        return new RatNum((t*r.n+n*r.t), (n*r.n));
+    }
 
+    //class methods:
 
     public static RatNum parse(String s)
     {
