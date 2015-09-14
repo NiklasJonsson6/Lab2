@@ -74,7 +74,7 @@ public class RatNum
 
     public double toDouble()
     {
-        return t/n;
+        return (double)t/n;
     }
 
     public boolean equals(RatNum r)
@@ -90,7 +90,22 @@ public class RatNum
 
     public RatNum add(RatNum r)
     {
-        return new RatNum((t*r.n+n*r.t), (n*r.n));
+        return new RatNum((t*r.n + n*r.t), (n*r.n));
+    }
+
+    public RatNum sub(RatNum r)
+    {
+        return new RatNum((t*r.n - n*r.t), (n*r.n));
+    }
+
+    public RatNum mul(RatNum r)
+    {
+        return new RatNum(t*r.t, n*r.n);
+    }
+
+    public RatNum div(RatNum r)
+    {
+        return new RatNum(t/r.t, n/r.n);
     }
 
     //class methods:
